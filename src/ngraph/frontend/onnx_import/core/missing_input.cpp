@@ -25,7 +25,6 @@ namespace ngraph
         missing_input::missing_input(const std::shared_ptr<Node>& arg)
             : ngraph::Node("Missing input", {}, 0)
         {
-            m_name = "";
         }
 
         void missing_input::validate_and_infer_types()
