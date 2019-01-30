@@ -31,6 +31,8 @@ add_library(onnx_import STATIC
         core/graph.hpp
         core/model.cpp
         core/model.hpp
+        core/missing_input.cpp
+        core/missing_input.hpp
         core/node.hpp
         core/operator_set.hpp
         core/tensor.hpp
