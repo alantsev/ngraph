@@ -18,6 +18,7 @@
 
 #include "attribute.hpp"
 #include "graph.hpp"
+#include "missing_input.hpp"
 #include "node.hpp"
 #include "tensor.hpp"
 
@@ -125,6 +126,10 @@ namespace ngraph
                 if (name != "")
                 {
                     result.push_back(m_graph->get_ng_node_from_cache(name));
+                }
+                else
+                {
+                    result.push_back(std::make_shared<missing_input>(nullptr));
                 }
             }
             return result;
